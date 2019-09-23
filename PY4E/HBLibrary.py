@@ -49,10 +49,10 @@ class TransparentCard(tk.Tk):
 
         self.title("Happy Birthday :D")
 
-        ###- self.Drag = Drag(self)
+        self.Drag = Drag(self)
 
         # Sets focus to the window.
-        ###- self.focus_force()
+        self.focus_force()
 
         # Removes the native window boarder.
         self.overrideredirect(True)
@@ -65,7 +65,7 @@ class TransparentCard(tk.Tk):
 
         # This changes the alpha value (How transparent the window should be).
         # It ranges from 0.0 (completely transparent) to 1.0 (completely opaque).
-        self.attributes("-alpha", 0.9)
+        self.attributes("-alpha", 0.85)
         ###- print(self.winfo_height(),self.winfo_width())
 
         # The windows overall position on the screen
@@ -79,19 +79,16 @@ class TransparentCard(tk.Tk):
 
         self.config(bg=bg)
 
-        ###- self.Frame = tk.Frame(self, bg=bg)
+        self.Frame = tk.Frame(self, bg=bg)
 
         # Exits the application when the window is right clicked.
-        ###- self.Frame.bind('<Button-3>', self.exit)
+        self.Frame.bind('<Button-3>', self.exit)
 
         # Changes the window's size indirectly.
-        ###- self.Frame.configure(width=600,height=900)
+        self.Frame.configure(width=600,height=900)
 
         font = 'TextFonts/good_times_rg.ttf'
-        if status==0 :
-            size = 30
-        else :
-            size = 20
+        size = 12
 
         cardText = open('CardText/CardText.txt', "r", encoding='utf-8')
         linesCardText = cardText.readlines()
@@ -105,7 +102,7 @@ class TransparentCard(tk.Tk):
                 label.pack()
         cardText.close()
 
-        ###- self.Frame.pack()
+        self.Frame.pack()
 
 
     def exit(self, event):

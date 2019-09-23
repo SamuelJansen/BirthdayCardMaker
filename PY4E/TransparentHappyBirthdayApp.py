@@ -29,7 +29,7 @@ def __run__(initialTime,size,xy,image) :
 
     while (now.time()-initialTime<40*(1.1)+.5) : #10) :#
         if (now.time()-time>1.1) : #4*1.1) :#
-            """
+            #"""
             window.update()
             try:
                 ballonRight.update()
